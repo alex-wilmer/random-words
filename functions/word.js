@@ -9,23 +9,25 @@ let words = [
   "pear"
 ];
 
+let headers = {
+  "Content-type": "application/json",
+  "Access-Control-Allow-Origin": "*"
+};
+
 exports.handler = (event, context, callback) => {
   if (event.queryStringParameters.key === "foobar") {
-    let randomWord = words[Math.floor(Math.random() * words.length)]
-    
+    let randomWord = words[Math.floor(Math.random() * words.length)];
+
     callback(null, {
       statusCode: 200,
-      
-      headers: { 
-        "Content-type": "application/json" ,
-        'Access-Control-Allow-Origin': '*',
-      },
+      headers,
       body: JSON.stringify([randomWord])
     });
   } else {
     callback(null, {
       statusCode: 400,
-      body: "invalid API key"
+      headers,
+      body: JSON.stringify({ error: "invalid API key" })
     });
   }
 };
