@@ -1,0 +1,19 @@
+{
+  "name": "random-words",
+  "version": "1.0.0",
+  "description": "Get random words",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-wilmer/random-words.git"
+  },
+  "author": "Alex Wilmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-wilmer/random-words/issues"
+  },
+  "homepage": "https://github.com/alex-wilmer/random-words#readme"
+}
